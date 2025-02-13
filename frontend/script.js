@@ -10,7 +10,7 @@ async function add() {
   const value2 = document.getElementById("input2").value;
   const displayScreen = document.getElementById("displayScreen");
 
-  const result = await answer(`http://13.228.225.19:7000/calculate?a=${value1}&b=${value2}&opr=${"add"}`)
+  const result = await answer(`https://server-calculate.onrender.com/calculate?a=${value1}&b=${value2}&opr=${"add"}`)
   displayScreen.innerHTML = result.toString();
 }
 
@@ -19,7 +19,7 @@ async function sub() {
   const value2 = document.getElementById("input2").value;
   const displayScreen = document.getElementById("displayScreen");
 
-  const result = await answer(`http://13.228.225.19:7000/calculate?a=${value1}&b=${value2}&opr=${"sub"}`)
+  const result = await answer(`https://server-calculate.onrender.com/calculate?a=${value1}&b=${value2}&opr=${"sub"}`)
 
   displayScreen.innerHTML = result.toString();
 }
@@ -29,7 +29,7 @@ async function mul() {
   const value2 = document.getElementById("input2").value;
   const displayScreen = document.getElementById("displayScreen");
 
-  const result = await answer(`http://13.228.225.19:7000/calculate?a=${value1}&b=${value2}&opr=${"mul"}`)
+  const result = await answer(`https://server-calculate.onrender.com/calculate?a=${value1}&b=${value2}&opr=${"mul"}`)
 
   displayScreen.innerHTML = result.toString();
 }
@@ -44,7 +44,7 @@ async function div() {
     displayScreen.innerHTML = "❌";
     return;
   } else {
-    result = await answer(`http://13.228.225.19:7000/calculate?a=${value1}&b=${value2}&opr=${"div"}`)
+    result = await answer(`https://server-calculate.onrender.com/calculate?a=${value1}&b=${value2}&opr=${"div"}`)
   }
 
   displayScreen.innerHTML = result.toString();
